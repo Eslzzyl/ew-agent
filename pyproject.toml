@@ -1,0 +1,13 @@
+[project]
+name = "ew-agent"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "agno>=2.4.3",
+    "openai>=2.15.0",
+    "prompt-toolkit>=3.0.52",
+    "python-dotenv>=1.2.1",
+    "sqlalchemy>=2.0.46",
+]
