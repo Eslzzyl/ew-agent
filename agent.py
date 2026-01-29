@@ -21,7 +21,7 @@ from tools import (
 
 load_dotenv()
 
-db = SqliteDb(db_file="eat_what.db")
+db = SqliteDb(db_file="data/eat_what.db")
 
 INSTRUCTION = """你是一个友好的吃饭助手，帮助用户解决'吃什么'的问题。
 

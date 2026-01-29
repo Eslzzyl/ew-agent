@@ -201,6 +201,13 @@ def get_eating_statistics(days: int = 7) -> str:
         for idx, (name, count) in enumerate(popular_choices, 1):
             result += f"  {idx}. {name}: {count} 次\n"
 
+        result += "\n详细记录：\n"
+        for history in histories:
+            result += f"  时间: {history.eaten_at.strftime('%Y-%m-%d %H:%M:%S')} | "
+            result += f"餐次: {history.meal_type} | "
+            result += f"餐厅: {history.food_choice.name} | "
+            result += f"餐品: {history.food_choice.food_type}\n"
+
         return result
     except Exception as e:
         return f"获取统计信息失败: {str(e)}"
